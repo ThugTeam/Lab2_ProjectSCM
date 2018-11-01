@@ -1,3 +1,4 @@
+
 public class Payroll {
 	public String name;
 	public String id;
@@ -40,8 +41,18 @@ public class Payroll {
 	}
 	public double calculate(int salary,int sale) {
 		double x = 0;
+		if(sale>=1 && sale<=25000) {
+			x = (salary +(sale*0.01));
+		}
+		else if(sale<=50000) {
+			x = (salary +(sale*0.02));
+		}
+		else {
+			x = (salary +(sale*0.03));
+		}
 		
 		return x;
+		
 	}
 
 }

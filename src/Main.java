@@ -3,6 +3,7 @@ public class Main {
 
 	public static void main(String[] args) {
 			inputData();
+		
 	}
 	public static void inputData() {
 		Scanner in = new Scanner(System.in);
@@ -22,7 +23,8 @@ public class Main {
 		System.out.println(pay[i].toString());
 			System.out.print("Do you want to continue [Y/N] : ");
 				a =in.next().charAt(0);
-				i++;	
+				i++;
+			
 		}
 		int sale;
 		String id;
@@ -34,15 +36,19 @@ public class Main {
 	}
 	public static void inputSale(Payroll[] pay,String id,int sale) {
 		for(int i=0;i<=pay.length;i++) {
-			if(id.equals(pay[i].id) == true) {
-				pay[i].setSale(sale);
-				pay[i].calculate(pay[i].salary,pay[i].sale);
-				System.out.println(pay[i].toString());
-				break;
-			}
-			else {
-				System.out.println("No ID number :"+id);
-			}
+		if(id.equals(pay[i].id) == true) {
+			pay[i].setSale(sale);
+			pay[i].calculate(pay[i].salary,pay[i].sale);
+			System.out.println(pay[i].toString());
+			break;
 		}
+		else {
+			System.out.println("No ID number :"+id);
+		}
+		}
+		
+	}
+	public static void chackMany() {
+		
 	}
 }
